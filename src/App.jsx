@@ -1,14 +1,13 @@
+import { Routes, Route } from 'react-router-dom'; 
+import Success from './components/Success';
+import Login from './components/Login';
+import './App.css';
 
-import './App.css'
-
-function App() {
-  
-
+export default function App() {
   return (
-    <form>
-      </form>
-     
-  )
+    <Routes>
+    <Route path="/" element={<Login />} />
+    <Route path="/Success" element={<Success />} />
+    </Routes>
+  );
 }
-
-export default App
