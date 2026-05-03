@@ -82,6 +82,7 @@ export default function Login() {
           value={form.email}
           onChange={handleChange}
           invalid={errors.email}
+          data-cy="form-email"
         />
         {errors.email &&
         <FormFeedback>{errorMessages.email}</FormFeedback> }
@@ -96,6 +97,7 @@ export default function Login() {
           value={form.password}
           onChange={handleChange}
           invalid={errors.password}
+          data-cy="form-password"
         />
         {errors.password &&
         <FormFeedback>{errorMessages.password}</FormFeedback> }
@@ -109,11 +111,12 @@ export default function Login() {
           checked={form.terms}
           onChange={handleChange}
           invalid={errors.terms}
+          data-cy="form-terms"
         />
         <Label check for="terms">Şartları kabul ediyorum</Label>
       </FormGroup>
 
-      <Button disabled={!isValid} color="primary">
+      <Button data-cy="submit-button" disabled={!isValid} color="primary">
         Submit
       </Button>
     </Form>
